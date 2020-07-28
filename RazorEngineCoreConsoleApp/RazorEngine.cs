@@ -94,7 +94,7 @@ namespace RazorEngineCoreConsoleApp
         {
             if (typeof(TModel).Namespace == null)
             {
-                await RunCompileAsync<TemplateBase, object>(name, code, new AnonymousTypeWrapper(model));
+                await RunCompileAsync<TemplateBase, object>(name, code, new AnonymousTypeWrapper(model), writer);
 
                 return;
             }
